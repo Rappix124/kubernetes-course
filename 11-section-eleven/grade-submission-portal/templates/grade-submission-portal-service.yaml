@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.microservice.name }}
   namespace: {{ .Values.microservice.namespace }}
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app.kubernetes.io/instance:  {{ .Values.microservice.name }}
   ports:
